@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".Controller" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/textView1"
+        android:background="#DDD" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/textView3"
+        android:text="Messages: " />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButton4"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:contentDescription="@string/left_button_description"
+        android:onClick="sendLeft"
+        android:src="@drawable/left_button" />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButton2"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:contentDescription="@string/forward_button_description"
+        android:onClick="sendForward"
+        android:src="@drawable/forward_button" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButton4"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:contentDescription="@string/right_button_description"
+        android:onClick="sendRight"
+        android:src="@drawable/right_button" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:contentDescription="@string/stay_button_description"
+        android:onClick="sendStay"
+        android:src="@drawable/stay_button" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:layout_margin="0dp"
+        android:contentDescription="@string/header_description"
+        android:padding="0dp"
+        android:src="@drawable/header" />
+
+</RelativeLayout>
