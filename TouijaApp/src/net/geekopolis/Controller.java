@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class Controller extends Activity implements Callback {
 
 	public static final String TAG = Controller.class.toString();
-	private boolean polling = true;
+	@SuppressWarnings("unused")
 	private Callback messagesCallback;
 
 	@Override
@@ -41,7 +41,6 @@ public class Controller extends Activity implements Callback {
 			@Override
 			public void receivedError(String message) {
 				// TODO Auto-generated method stub
-
 			}
 		};
 	}
@@ -51,41 +50,8 @@ public class Controller extends Activity implements Callback {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.controller, menu);
 
-		//pollServer();
-		
-//		AsyncTask<Void, Void, String> messagesTask = new AsyncTask<Void, Void, String>() {
-//
-//			@Override
-//			protected String doInBackground(Void... params) {
-//				return null;
-//			}
-//
-//		};
-//		messagesTask.execute();
-
 		return true;
 	}
-
-//	private void pollServer() {
-//		Thread thread = new Thread() {
-//			@Override
-//			public void run() {
-//				while (polling) {
-//					try {
-//						sleep(1000);
-//						Messages.command("", messagesCallback);
-//					} catch (InterruptedException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}
-//					
-//
-//				}
-//			}
-//		};
-//
-//		thread.start();
-//	}
 
 	public void sendLeft(View view) {
 		Send.command("l", this);
